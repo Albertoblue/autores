@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block main%}
+
+{% load bootstrap %}
+
+<h2 class="mt-3 ">Nuevo Autor</h2>
+
+
+
+    <form action="{%url 'usuarios:autoresForm'%}" method="post">
+
+        {% csrf_token %}
+
+        <div class="container">
+
+        
+
+        {{form|bootstrap}}
+
+    
+
+
+        <input type="submit" value="Guardar Autor" class="btn btn-primary mt-3">
+
+    </div>
+    </form>
+
+
+
+
+
+
+
+{%endblock%}

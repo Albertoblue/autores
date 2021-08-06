@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{%load bootstrap%}
+{%block main%}
+
+<h2>Editar autor</h2>
+
+<div class="container">
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {{form|bootstrap}}
+
+    <input type="submit" value="Guardar" class="btn btn-primary mt-5">
+
+
+
+</form>
+
+</div>
+
+{%endblock%}
+
